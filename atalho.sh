@@ -39,8 +39,8 @@ if [ $idioma -eq 1 ]; then
 		if [ -e $executavel ]; then
 			$repete = 0
 		else
-			echo 'Esse diretório não foi encontrado'
 			clear
+			echo 'Esse diretório não foi encontrado'
 		fi
 	done
 
