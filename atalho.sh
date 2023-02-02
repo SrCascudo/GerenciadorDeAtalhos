@@ -26,18 +26,16 @@ if [ $idioma -eq 1 ]; then
 	echo 'Para a criação do seu atalho será solicitado'
 	echo 'o caminho/diretório de alguns arquivos. Tendo isso'
 	echo 'em vista, essas infomações devem ser indicadas com'
-	echo 'diretório completo, como no exemplo a seguir.'
-	echo ''
-	echo '->	/home/{username}/documentos/executavel.sh'
-	echo ''
+	echo -e 'diretório completo, como no exemplo a seguir. \n'
+	echo -e '->	/home/{username}/documentos/executavel.sh \n'
 
 	repete=1
 	while [[ $repete -eq 1 ]]; do
 		echo 'Qual o caminho para o executável que deseja criar atalho?'
 		echo -n ''
 		read executavel
-		if [ -e $executavel ]; then
-			$repete = 0
+		if [ -f $executavel ]; then
+			repete=0
 		else
 			clear
 			echo 'Esse diretório não foi encontrado'
@@ -50,3 +48,5 @@ if [ $idioma -eq 1 ]; then
 else
 	echo 'Selected the English option'
 fi
+
+echo -e '\n'
