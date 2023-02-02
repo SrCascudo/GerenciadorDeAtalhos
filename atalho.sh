@@ -33,7 +33,7 @@ if [ $idioma -eq 1 ]; then
 	while [[ $repete -eq 1 ]]; do
 		echo 'Qual o caminho para o executável que deseja criar atalho?'
 		echo -n ''
-		read executavel
+		read -e executavel
 		if [ -f $executavel ]; then
 			repete=0
 		else
